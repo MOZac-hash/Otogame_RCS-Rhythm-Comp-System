@@ -6,8 +6,10 @@ Made by M0Z@C from MozacLab/XJU2019/XJUSEC
 ![Logo](./static/images/logo.png)
 
 <html>
-<iframe id="afdian_leaflet_{mozaclab}" src="https://afdian.net/leaflet?slug={1}" width="100%" scrolling="no" height="200" frameborder="0"></iframe>
-<script>document.body.clientWidth< 700 ? document.getElementById("afdian_leaflet_{mozaclab}").width = "100%" : document.getElementById("afdian_leaflet_{mozaclab}").width = "640"</script>
+	<iframe id="afdian_leaflet_{mozaclab}" src="https://afdian.net/leaflet?slug={1}" width="100%" scrolling="no" height="200" frameborder="0"></iframe>
+	<script>
+		document.body.clientWidth< 700 ? document.getElementById("afdian_leaflet_{mozaclab}").width = "100%" : document.getElementById("afdian_leaflet_{mozaclab}").width = "640"
+	</script>
 </html>
 
 ## 赞助者
