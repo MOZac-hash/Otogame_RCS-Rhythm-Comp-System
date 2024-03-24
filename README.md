@@ -5,16 +5,7 @@ Made by M0Z@C from MozacLab/XJU2019/XJUSEC
 
 ![Logo](./static/images/logo.png)
 
-<html>
-	<iframe id="afdian_leaflet_mozaclab" src="https://afdian.net/leaflet?slug=mozaclab" width="100%" scrolling="no" height="200" frameborder="0"></iframe>
-	<script>
-		document.body.clientWidth< 700 ? document.getElementById("afdian_leaflet_mozaclab").width = "100%" : document.getElementById("afdian_leaflet_{mozaclab}").width = "640"
-	</script>
-</html>
-
-<a href="https://afdian.net/a/mozaclab">
-	< img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" alt="">
-</a>
+![爱发电](https://afdian.moeci.com/d96a5484caf211ec9d4152540025c377/7H9nRTCjbQyxYWrNatfhcSBed3GKMpvw/badge.svg)
 
 ## 赞助者
 
