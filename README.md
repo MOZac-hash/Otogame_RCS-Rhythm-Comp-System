@@ -5,6 +5,13 @@ Made by M0Z@C from MozacLab/XJU2019/XJUSEC
 
 ![Logo](./static/images/logo.png)
 
+## 赞助者
+
+首先感谢这些来自爱发电的赞助者：
+
+<!-- AFDIAN-ACTION:START -->
+<!-- AFDIAN-ACTION:END -->
+
 ## I.简介与功能
 本系统包含***主页、倒计时、登录、后台、文件上传、文件管理*** 等多个页面，旨在为音乐游戏类竞赛提供基础的竞赛宣传、数据公开服务。
 
