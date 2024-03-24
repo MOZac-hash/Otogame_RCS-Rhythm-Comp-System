@@ -1,0 +1,40 @@
+.chartnav .item{
+    display: inline-block;
+}
+.chartnav .item.active{
+    font-weight: bold;
+    color: #553333;
+    text-shadow:  0 0 5px #aaaaaa,0 0 5px #ffffff ;
+}
+
+.course{
+    display: none;
+}
+.course.active{
+    display: block;
+}
+.course .item{
+    display: inline-block;
+}
+
+.course .item.active{
+    font-weight: bold;
+    color: #553333;
+    text-shadow:  0 0 5px #aaaaaa,0 0 5px #ffffff ;
+}
+
+.competition{
+    display: none;
+}
+
+.competition.active{
+    display: block;
+}
+
+.competition .section{
+    display: none;
+}
+
+.competition .section.active{
+    display: block;
+}

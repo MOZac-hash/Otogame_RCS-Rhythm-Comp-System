@@ -1,0 +1,39 @@
+{
+  "main": {
+    "name": "新疆大学第一届音乐游戏大赏",
+    "database": {
+      "addr": "localhost",
+      "port": "3306",
+      "name": "otocomp",
+      "username": "xju",
+      "passwd": "123456"
+    },
+    "comp": ["Phigros","Arcaea","Cytus2"],
+    "datafile": {
+      "path": "./upload/",
+      "comps": {
+        "Phigros": {
+          "filetype": "xls"
+        },
+        "Arcaea": {
+          "filetype": "xls"
+        },
+        "Cytus2": {
+          "filetype": "xls"
+        }
+      }
+    },
+    "secure": {
+      "SECRET_KEY": "xju?first#otogame_competition"
+    },
+    "admins": {
+      "Test1": "123456",
+      "yixiangtang2023": "Gkaq1uWs",
+      "haiyun2023": "WDfkxrSL",
+      "yaoxian2023": "HdSkKdpL"
+    }
+  },
+  "addup": {
+    "ICP": "鲁ICP备2022008821号"
+  }
+}

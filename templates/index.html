@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比赛排行榜 | {{ compName }} </title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="images/logo.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="#home">首页</a>
+        <a href="#about">关于</a>
+        <a href="#menu">比赛赛道</a>
+        <a href="#products">竞赛奖励</a>
+        <a href="/charts">排行榜</a>
+        <!--
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="#blogs">blogs</a>-->
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <div class="cart-items-container">
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="images/cart-item-1.png" alt="">
+            <div class="content">
+                <h3>cart item 01</h3>
+
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="images/cart-item-2.png" alt="">
+            <div class="content">
+                <h3>cart item 02</h3>
+
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="images/cart-item-3.png" alt="">
+            <div class="content">
+                <h3>cart item 03</h3>
+
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="images/cart-item-4.png" alt="">
+            <div class="content">
+                <h3>cart item 04</h3>
+
+            </div>
+        </div>
+        <a href="#" class="btn">checkout now</a>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>{{ compName }}</h3>
+        <p>公平、创新、开放的新型音乐游戏竞赛支持服务与信息公开平台</p>
+        <a href="#" class="btn">报名参赛</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>关于</span> 竞赛 </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/about-img.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>关于本次比赛</h3>
+            <p style="font-size: 2rem;">本次比赛分别设立 <span style="color: #f3c17a;"><b>Phigros、Arcaea、CytusII</b></span> 共计三个赛道，将通过<span style="color: #f3c17a;"><b>预选赛、十六强赛、八强赛、四强赛、决赛</b></span>五项赛程角逐排名。</p>
+            <p>从<span style="color: #f3c17a;"><b>十六强赛</b></span>开始，比赛将通过线下赛的形式进行，并随选手数量减少，采用积分制夺取胜负，祝各位好运。</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h1 class="heading"> 赛道 <span>设置</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/Arcaea.png" alt="">
+            <br><br>
+            <h3>Arcaea</h3>
+
+
+        </div>
+
+        <div class="box">
+            <img src="images/Phigros.png" alt="">
+            <br><br>
+            <h3>Phigros</h3>
+
+
+        </div>
+
+        <div class="box">
+            <img src="images/CytusII.png" alt="">
+            <br><br>
+            <h3>CytusII</h3>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> 竞赛奖励 与 <span>奖项设置</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/product-1.png" alt="">
+            </div>
+            <div class="content">
+                <h3>一等奖</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p style="color: white;font-size: 1.5rem;">每赛道<span style="color: #f3c17a;">限4名</span>，奖品为xxxxxx</p>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/product-2.png" alt="">
+            </div>
+            <div class="content">
+                <h3>二等奖</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p style="color: white;font-size: 1.5rem;">每赛道<span style="color: #f3c17a;">限8名</span>，奖品为xxxxxx</p>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/product-3.png" alt="">
+            </div>
+            <div class="content">
+                <h3>三等奖</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                </div>
+                <p style="color: white;font-size: 1.5rem;">每赛道<span style="color: #f3c17a;">限16名</span>，奖品为xxxxxx</p>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section starts  -->
+<!--
+<section class="review" id="review">
+
+    <h1 class="heading"> customer's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
+            <img src="images/pic-1.png" class="user" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
+            <img src="images/pic-2.png" class="user" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
+            <img src="images/pic-3.png" class="user" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+-->
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+<!--
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us </h1>
+
+    <div class="row">
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1629452077891!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+
+        <form action="">
+            <h3>get in touch</h3>
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" placeholder="name">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" placeholder="number">
+            </div>
+            <input type="submit" value="contact now" class="btn">
+        </form>
+
+    </div>
+
+</section>-->
+
+<!-- contact section ends -->
+
+<!-- blogs section starts  -->
+<!--
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/blog-1.jpeg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">tasty and refreshing coffee</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/blog-2.jpeg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">tasty and refreshing coffee</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/blog-3.jpeg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">tasty and refreshing coffee</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+-->
+<!-- blogs section ends -->
+
+<!-- footer section starts  -->
+<br><br><br><br>
+<section class="footer">
+    <!--<div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>-->
+    <div class = "footer-text" style="text-align: center; color: white">
+        <h1><b>相关链接</b></h1>
+    </div>
+
+    <div class="links">
+        <a href="#">异想堂动漫社</a>
+        <a href="#">幺弦动漫社</a>
+        <a href="#">海韵文化社</a>
+    </div>
+
+    <div class="credit">
+        <p>©Copyright 2019 <span>M0Z@C莫扎柯/末章</span> 版权所有 | {{ icp }}</p></div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+/*引用谷歌字体-线上*/
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&diasply=swap'); */
+/*引用谷歌字体-本地*/
+@import 'css/google-font.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins',sans-serif;
+    font-size: 62.5%;
+    font-weight: 400;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    /*background-color: #03e9f4;*/
+    background-image: url("../images/backimg.png");
+    background-position: center center;
+    /* 背景图不平铺 */
+    background-repeat: no-repeat;
+    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+    background-attachment: fixed;
+    /* 让背景图基于容器大小伸缩 */
+    background-size: cover;
+}
+/*
+.bubble-cotainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bubble-cotainer .bubble{
+    position: absolute;
+    bottom: -10rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    opacity: .5;
+    animation: rise 10s infinite ease-in;
+}
+
+.bubble-cotainer .bubble-1{
+    width: 4rem;
+    height: 4rem;
+    left: 10%;
+    animation: 8s;
+}
+
+.bubble-cotainer .bubble-2{
+    width: 2rem;
+    height: 2rem;
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+.bubble-cotainer .bubble-3{
+    width: 5rem;
+    height: 5rem;
+    left: 35%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+.bubble-cotainer .bubble-4{
+    width: 8rem;
+    height: 8rem;
+    left: 50%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+}
+.bubble-cotainer .bubble-5{
+    width: 3.5rem;
+    height: 3.5rem;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+.bubble-cotainer .bubble-6{
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 65%;
+    animation-duration: 8s;
+    animation-delay: 1s;
+}
+.bubble-cotainer .bubble-7{
+    width: 9rem;
+    height: 9rem;
+    left: 75%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+.bubble-cotainer .bubble-8{
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+*/
+@keyframes rise {
+    0%{
+        bottom: -10rem;
+        transform: translateX(0);
+    }
+    50%{
+        transform: translate(10rem);
+    }
+    100%{
+        bottom: 1080px;
+        transform: translateX(-20rem);
+    }
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+}
+
+.container .content{
+    color: #ffffff;
+    text-align: center;
+}
+.container .content h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+
+}
+.container .content p{
+    font-size: 1.6rem;
+}
+
+
+
+@media(min-width: 576px) {
+    .container{
+        width: 540px;
+    }
+}
+@media(min-width: 768px) {
+    .container{
+        width: 720px;
+    }
+    .container .content h1{
+        font-size: 6rem;
+    }
+    .container .content p{
+        font-size: 3.5rem;
+    }
+    .container .content .endTime>div{
+    text-align: center;
+    font-size: 5rem;
+}
+}
+@media(min-width: 992px) {
+    .container{
+        width: 960px;
+    }
+}
+@media(min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+@media(min-width: 1400px) {
+    .container{
+        width: 1320px;
+    }
+}
+.container .content .counter{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.container .content .counter>div{
+    width: 10rem;
+    height: 10rem;
+    border-radius: .5rem;
+    border: .1rem solid #ffffff;
+    box-shadow: #888 1px 0 0, #888 0 1px 0, #888 -1px 0 0, #888 0 -1px 0;
+    font-size: 3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container .content .counter>div .title{
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    border-top: .1rem solid #ffffff;
+}
+.container .endTime{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.back{
+    position: relative;
+    display: flex;
+}
+.back div{
+    position: absolute;
+    width: 100% ;
+    display: flex;
+    overflow:hidden;
+}
+.back .phi{
+    top:0;
+    padding: 0;
+    margin:0;
+    right: 0;
+    height: 100vh;
+    width: auto;
+    float: right;
+    text-align: right;
+}
+.back .arc{
+    top:0;
+    padding-left: 0;
+    margin-left:0;
+    left: 0;
+    height: 100vh;
+}
+.niceButton4{
+    background-color: skyblue;
+    border: none;
+    border-radius: 12px;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+.niceButton4:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),
+    0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.gcs-footer{
+    width: 100%;
+    align-self: center;
+    font-size: 1.5rem;
+    align-items: center;
+    position:fixed;
+    bottom:0;
+  margin-top: 20px;
+  text-align: center;
+    text-shadow: #000 0.2px 0 0, #000 0 0.2px 0, #000 -1px 0 0, #000 0 -1px 0;
+  color: white;
+}
+
+.gcs-footer a{
+  color: #f0f1f1;
+  text-decoration: none;
+  padding: 0 10px;
+  vertical-align:middle;
+}

@@ -1,0 +1,24 @@
+body{
+    background-image: url("../images/backimg.png");
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.contentbox{
+    margin-top: 10%;
+    width: 100%;
+    align-items: center;
+}
+.content{
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    border: 2px #d6d6d6;
+}
+.content .username{
+    color: #00cccc;
+}

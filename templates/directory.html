@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-dege">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/directory.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>管理后台 | {{ compName }}</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><img class="image" src="/images/logo.png"></a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="/admin">首页</a></li>
+                <li><a href="/upload">上传</a></li>
+                <li><a href="/directory">目录</a></li>
+                <li><a href="/logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+    <h1>文件管理</h1>
+    <p>当前目录为uploads</p>
+    <table>
+    <thead>
+            <tr>
+                <th>文件名</th>
+                <th>最后上传时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+    <tbody>
+    {% for i in range(filenames|length) %}
+        <tr>
+            <td><a href="/download/{{ filenames[i] }}">  {{ filenames[i]  }}  </a></td>
+            <td><p>{{ buildtimes[i] }}</p></td>
+            <td><a class="button" href="/delete/{{ filenames[i]  }}" role="button">Delete</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+<div class="gcs-footer">
+  <div class="footer-top">
+      <a href="#">异想堂动漫社</a> |
+      <a href="#">幺弦动漫社</a> |
+      <a href="#">海韵文化社</a>
+  </div>
+    <p>©Copyright 2019 M0Z@C莫扎柯/末章 版权所有 | {{ icp }}</p>
+</div>
+</body>
+</html>

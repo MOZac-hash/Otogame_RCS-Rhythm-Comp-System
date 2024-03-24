@@ -1,0 +1,46 @@
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE-dege">
+            <meta name="viewport" content="width=device=width, initial-scale=1.0">
+            <link rel="stylesheet" href="/css/uploads.css">
+            <link rel="stylesheet" href="/css/navbar.css">
+            <link rel="stylesheet" href="/css/footer.css">
+            <title>排行榜 | {{ compname }}</title>
+        </head>
+        <body>
+            <h1>比赛成绩表</h1>
+            <div>
+                {% if data|length > 1 %}
+                    <table>
+                        <thead>
+                            <tr>
+                                {% for head in data[0] %}
+                                    <th>{{ head }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in range(1,data|length) %}
+                                <tr>
+                                    {% for key in data[i] %}
+                                        <td>{{ key }}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <h2>暂无数据</h2>
+                {% endif %}
+            </div>
+            <div class="gcs-footer">
+              <div class="footer-top">
+                  <a href="#">异想堂动漫社</a> |
+                  <a href="#">幺弦动漫社</a> |
+                  <a href="#">海韵文化社</a>
+              </div>
+                <p>©Copyright 2019 M0Z@C莫扎柯/末章 版权所有 | {{ icp }}</p>
+            </div>
+        </body>
+    </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--重要的事情说三遍-->
+<!--请前往/statics/js/timer.js更新比赛时间-->
+<!--请前往/statics/js/timer.js更新比赛时间-->
+<!--请前往/statics/js/timer.js更新比赛时间-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-dege">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/timer.css">
+    <title>比赛预告Game Trailer | {{ compName }}</title>
+
+</head>
+<body>
+<div class="back">
+    <div class="arc"><img src="/images/arc.png"></div>
+    <div class="phi"><img src="/images/phi.png"></div>
+</div>
+<!--
+<div calss="bubble-container">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+    <div class="bubble bubble-5"></div>
+    <div class="bubble bubble-6"></div>
+    <div class="bubble bubble-7"></div>
+    <div class="bubble bubble-8"></div>
+</div>
+-->
+<div class="container">
+    <div class="content">
+        <h1>下场比赛开始于</h1>
+        <p>The next game will start at</p>
+        <p class="endTime" style="border: .1rem solid #ffffff;box-shadow: #888 1px 0 0, #888 0 1px 0, #888 -1px 0 0, #888 0 -1px 0;border-radius: .5rem;"></p>
+        <h1>距离开始还有</h1>
+        <p>Time remains until start</p>
+        <div class="counter">
+            <div class="days">
+                <div class="number"></div>
+                <div class="title">Days</div>
+            </div>
+            <div class="hours">
+                <div class="number"></div>
+                <div class="title">Hours</div>
+            </div>
+            <div class="minutes">
+                <div class="number"></div>
+                <div class="title">Minutes</div>
+            </div>
+            <div class="seconds">
+                <div class="number"></div>
+                <div class="title">Seconds</div>
+            </div>
+        </div>
+        <br>
+        <div id="buttonMobile"><button class='niceButton4' onclick="{ if(confirm('确定跳转？'))location.href='https://d.bilibili.com/download_app.html?preUrl=https%3A%2F%2Fm.bilibili.com%2Fspace%2F319798609&schema=bilibili%3A%2F%2Fspace%2F319798609%3Ffrommodule%3DH5&h5awaken=b3Blbl9hcHBfZnJvbV90eXBlPWg1Jm9wZW5fYXBwX3V1aWQ9NUU1MTY4MTBDLUVCRUMtNzE3RC04QTQ1LTM4MTBBM0JFOUQ0NzM5MTk4OGluZm9jJm9wZW5fYXBwX2dyb3VwaWQ9JTdCJTdEJm9wZW5fYXBwX3VybD1odHRwcyUzQSUyRiUyRm0uYmlsaWJpbGkuY29tJTJGc3BhY2UlMkYzMTk3OTg2MDkmb3Blbl9hcHBfYWRkaXRpb249JTdCJTIydGVjaF90eXBlJTIyJTNBJTIydW5pdmVyc2FsJTIyJTJDJTIydWFTb3VyY2UlMjIlM0ElMjIlMjIlMkMlMjJic291cmNlJTIyJTNBJTIyZGVmYXVsdCUyMiUyQyUyMnNwbWlkJTIyJTNBJTIyMzMzLjIuY2xpY2suYXBwX2NsaWNrJTIyJTJDJTIyaDVfYnV2aWQlMjIlM0ElMjIzRTdDMkQzMy02MTRFLTQyNDctOEM3Ri00QjJFMzJFRDc0OTAxNjc2MzdpbmZvYyUyMiUyQyUyMmg1X21pZCUyMiUzQSUyMjEzMjk5NjYzJTIyJTJDJTIydHMlMjIlM0ExNjgxNjQ2NzY2MjgzJTJDJTIydWElMjIlM0ElMjJNb3ppbGxhJTJGNS4wJTIwKGlQaG9uZSUzQiUyMENQVSUyMGlQaG9uZSUyME9TJTIwMTNfMl8zJTIwbGlrZSUyME1hYyUyME9TJTIwWCklMjBBcHBsZVdlYktpdCUyRjYwNS4xLjE1JTIwKEtIVE1MJTJDJTIwbGlrZSUyMEdlY2tvKSUyMFZlcnNpb24lMkYxMy4wLjMlMjBNb2JpbGUlMkYxNUUxNDglMjBTYWZhcmklMkY2MDQuMSUyMiUyQyUyMmJpel90eXBlJTIyJTNBJTIybXN0YXRpb24lMjIlMkMlMjJzZXNzaW9uSWQlMjIlM0ElMjJtYXRjdGZtNDVhM25qeWxmbGdqZDIwN24lMjIlMkMlMjJpdGVtX2lkJTIyJTNBJTdCJTIyaWQlMjIlM0ElMjIzMTk3OTg2MDklMjIlN0QlMkMlMjJvcGVuaWQlMjIlM0ElMjIlMjIlMkMlMjJ3eGZpZCUyMiUzQSUyMiUyMiU3RA%3D%3D'}">前往直播间</button></div>
+        <div id="buttonPC"><button class='niceButton4' onclick="{ if(confirm('确定跳转？'))location.href='https://space.bilibili.com/319798609'}" > 前往直播间 </button></div>
+    </div>
+</div>
+<div class="gcs-footer">
+  <div class="footer-top">
+      <a href="#">异想堂动漫社</a> |
+      <a href="#">幺弦动漫社</a> |
+      <a href="#">海韵文化社</a>
+  </div>
+    <p>©Copyright 2019 M0Z@C莫扎柯/末章 版权所有 | {{ icp }}</p>
+</div>
+<script type="application/javascript" src="/js/timer.js"></script>
+</body>
+</html>

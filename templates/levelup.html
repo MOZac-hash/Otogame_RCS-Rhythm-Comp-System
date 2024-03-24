@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+		{{url.title}}对局图
+	</title>
+	<style>
+		body {
+			background-color: #010516;
+		}
+		.content {
+			width: 1920px;
+			margin: 0 auto;
+			background: #232332;
+		}
+		.tree-content {
+			margin-top: 8%;
+		}
+		.content .match-map {
+		 padding-top: 40px;
+		 padding-bottom: 40px;
+		}
+		.match .info .round {
+			height: 16px;
+			display: flex;
+			align-items: center;
+			color: #fff;
+			font-size: 12px;
+			line-height: 16px;
+			margin-bottom: 3px;
+		}
+		.single-connect {
+		 width: 100%;
+		 display: flex;
+		 justify-content: center;
+		 position: relative;
+		}
+		.single-connect .connections {
+		 z-index: 1;
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 width: 100%;
+		 height: 100%;
+		 pointer-events: none;
+		}
+		.team .info {
+			flex: 1 1;
+			display: flex;
+			align-items: center;
+		}
+		.team .info .logo {
+			width: 26px;
+			min-width: 26px;
+			height: 26px;
+			margin: 0px 8px;
+		}
+		.team .info .name {
+			font-family: Helvetica,Arial,sans-serif;
+			font-size: 14px;
+			height: 18px;
+			line-height: 18px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			letter-spacing: 0;
+		}
+		.team.feature .info>.name {
+			color: #fff;
+		}
+		.team {
+			height: 44px;
+			display: flex;
+			position: relative;
+		}
+		.team.feature {
+			margin-bottom: 1px;
+			background: rgba(255,255,255,.1);
+		}
+		.team.unknown {
+			background: rgba(255,255,255,.1);
+		}
+		.team.unknown .info>.name {
+			color: #fff;
+		}
+		.single-connect .col-left {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+		}
+		.single-connect .col-right {
+			min-width: 268px;
+			margin-left: 110px;
+			display: flex;
+			align-items: center;
+		}
+		.single-connect .connections .connection {
+			stroke: rgba(255,255,255,.3);
+			stroke-width: 2px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			fill: rgba(0,0,0,0);
+		}
+		.match {
+			width: 268px;
+		}
+		.match .home-team {
+			margin-bottom: 1px;
+		}
+		.future {
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="content">
+		<div class="tree-content">
+		<!-- 比赛全程 -->
+			<div class="match-map">
+				<div class="single-connect">
+					<svg class="connections">
+						<path x1="1218" y1="237" x2="1458" y2="468" class="connection" id="line09"></path>
+						<path x1="1218" y1="697" x2="1458" y2="468" class="connection" id="line10"></path>
+					</svg>
+					<div class="col-left">
+						<!-- 上半区比赛 -->
+						<div class="match-map">
+							<div class="single-connect">
+								<svg class="connections">
+									<path x1="646" y1="103" x2="756" y2="202" class="connection" id="line05"></path>
+									<path x1="646" y1="293" x2="756" y2="202" class="connection" id="line06"></path>
+								</svg>
+								<div class="col-left">
+									<!-- Group1 -->
+									<div class="match-map">
+										<div class="single-connect">
+											<svg class="connections">
+												<path x1="268" y1="64" x2="378" y2="64" class="connection" id="line01"></path>
+											</svg>
+											<div class="col-left">
+												<div class="match">
+													<div class="i-row">
+														<div class="info">
+															<div class="round">
+																淘汰赛
+															</div>
+														</div>
+														<div class="options">
+														</div>
+													</div>
+													<div class="match-c">
+														<div class="home-team team feature">
+															<div class="info">
+																<img loading="lazy" src="jdg.webp" class="logo">
+																<div class="name">
+																	JDG
+																</div>
+															</div>
+														</div>
+														<div class="team feature">
+															<div class="info">
+																<img loading="lazy" src="rge.webp" class="logo">
+																<div class="name">
+																	RGE
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-right">
+												<div class="match">
+													<div class="i-row">
+														<div class="info">
+															<div class="round">
+																半决赛
+															</div>
+														</div>
+														<div class="options">
+														</div>
+													</div>
+													<div class="match-c future" id="res01">
+														<div class="team unknown">
+															<div class="info">
+																<img loading="lazy" src="jdg.webp" class="logo">
+																<div class="name">
+																	JDG
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Group2 -->
+									<div class="match-map">
+										<div class="single-connect">
+											<svg class="connections">
+												<path x1="268" y1="64" x2="378" y2="64" class="connection" id="line02"></path>
+											</svg>
+											<div class="col-left">
+												<div class="match">
+													<div class="i-row">
+														<div class="info">
+															<div class="round">
+																淘汰赛
+															</div>
+														</div>
+														<div class="options">
+														</div>
+													</div>
+													<div class="match-c">
+														<div class="home-team team feature">
+															<div class="info">
+																<img loading="lazy" src="t1.webp" class="logo">
+																<div class="name">
+																	T1
+																</div>
+															</div>
+														</div>
+														<div class="team feature">
+															<div class="info">
+																<img loading="lazy" src="rng.webp" class="logo">
+																<div class="name">
+																	RNG
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-right">
+												<div class="match">
+													<div class="i-row">
+														<div class="info">
+															<div class="round">
+																半决赛
+															</div>
+														</div>
+														<div class="options">
+														</div>
+													</div>
+													<div class="match-c future" id="res02">
+														<div class="team unknown">
+															<div class="info">
+																<img loading="lazy" src="t1.webp" class="logo">
+																<div class="name">
+																	T1
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-right">
+									<div class="match">
+										<div class="i-row">
+											<div class="info">
+												<div class="round">
+													决赛
+												</div>
+											</div>
+											<div class="options">
+											</div>
+										</div>
+										<div class="match-c future"  id="res05">
+											<div class="team unknown">
+												<div class="info">
+													<img loading="lazy" src="jdg.webp" class="logo">
+													<div class="name">
+														JDG
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 下半区比赛 -->
+						<div class="match-map">
+							<div class="single-connect">
+								<svg class="connections">
+									<path x1="646" y1="103" x2="756" y2="202" class="connection" id="line07"></path>
+									<path x1="646" y1="293" x2="756" y2="202" class="connection" id="line08"></path>
+								</svg>
+								<div class="col-left">
+									<div class="match-map">
+										<div class="single-connect">
+											<svg class="connections">
+												<path x1="268" y1="64" x2="378" y2="64" class="connection" id="line03"></path>
+											</svg>
+											<div class="col-left">
+												<div class="match">
+													<div class="i-row">
+														<div class="info">
+															<div class="round">
+																淘汰赛
+															</div>
+														</div>
+														<div class="options">
+														</div>
+													</div>
+													<div class="match-c">
+														<div class="home-team team feature">
+															<div class="info">
+																<img loading="lazy" src="gen.webp" class="logo">
+																<div class="name">
+																	GEN
+																</div>
+															</div>
+														</div>
+														<div class="team feature">
+															<div class="info">
+																<img loading="lazy" src="dk.webp" class="logo">
+																<div class="name">
+																	DK
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-right">
+												<div class="match">
+													<div class="i-row">
+														<div class="info">
+															<div class="round">
+																半决赛
+															</div>
+														</div>
+														<div class="options">
+														</div>
+													</div>
+													<div class="match-c future"  id="res03">
+														<div class="team unknown">
+															<div class="info">
+																<img loading="lazy" src="dk.webp" class="logo">
+																<div class="name">
+																	DK
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="match-map">
+										<div class="single-connect">
+											<svg class="connections">
+												<path x1="268" y1="64" x2="378" y2="64" class="connection" id="line04"></path>
+											</svg>
+											<div class="col-left">
+												<div class="match">
+													<div class="i-row">
+														<div class="info">
+															<div class="round">
+																淘汰赛
+															</div>
+														</div>
+														<div class="options">
+														</div>
+													</div>
+													<div class="match-c">
+														<div class="home-team team feature">
+															<div class="info">
+																<img loading="lazy" src="drx.webp" class="logo">
+																<div class="name">
+																	DRX
+																</div>
+															</div>
+														</div>
+														<div class="team feature">
+															<div class="info">
+																<img loading="lazy" src="edg.webp" class="logo">
+																<div class="name">
+																	EDG
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-right">
+												<div class="match">
+													<div class="i-row">
+														<div class="info">
+															<div class="round">
+																半决赛
+															</div>
+														</div>
+														<div class="options">
+														</div>
+													</div>
+													<div class="match-c future"  id="res04">
+														<div class="team unknown">
+															<div class="info">
+																<img loading="lazy" src="drx.webp" class="logo">
+																<div class="name">
+																	DRX
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-right">
+									<div class="match">
+										<div class="i-row">
+											<div class="info">
+												<div class="round">
+													决赛
+												</div>
+											</div>
+											<div class="options">
+											</div>
+										</div>
+										<div class="match-c future"  id="res06">
+											<div class="team unknown">
+												<div class="info">
+													<img loading="lazy" src="dk.webp" class="logo">
+													<div class="name">
+														DK
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-right" style="margin-left: 240px;">
+						<div class="match">
+							<div class="i-row">
+								<div class="info">
+									<div class="round">
+										S12全球总决赛冠军
+									</div>
+								</div>
+								<div class="options">
+								</div>
+							</div>
+							<div class="match-c future"  id="res07">
+								<div class="team unknown">
+									<div class="info">
+										<img loading="lazy" src="jdg.webp" class="logo">
+										<div class="name">
+											JDG
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		onload = function(){
+			let index = 0;
+			time = setInterval(function(){
+				if(index == 0){
+					console.log("drawLine 01");
+					drawLine("line01");
+				}else if(index == 1){
+					console.log("showRes 01");
+					showRes("res01");
+				}else if(index == 2){
+					console.log("drawLine 02");
+					drawLine("line02");
+				}else if(index == 3){
+					console.log("showRes 02");
+					showRes("res02");
+				}else if(index == 4){
+					console.log("drawLine 03");
+					drawLine("line03");
+				}else if(index == 5){
+					console.log("showRes 03");
+					showRes("res03");
+				}else if(index == 6){
+					console.log("drawLine 04");
+					drawLine("line04");
+				}else if(index == 7){
+					console.log("showRes 04");
+					showRes("res04");
+				}else if(index == 8){
+					console.log("drawLine 05,06");
+					drawTwoLine("line05","line06");
+				}else if(index == 9){
+					console.log("showRes 05");
+					showRes("res05");
+				}else if(index == 10){
+					console.log("drawLine 07,08");
+					drawTwoLine("line07","line08");
+				}else if(index == 11){
+					console.log("showRes 06");
+					showRes("res06");
+				}else if(index == 12){
+					console.log("drawLine 09,10");
+					drawTwoLine("line09","line10");
+				}
+				if(index == 14){
+					clearInterval(time);
+					showRes("res07");
+				}
+				index++;
+				console.log(index);
+			},1000);
+
+		}
+
+		function drawLine(id){
+			let obj = document.getElementById(id);
+			let x1 = obj.getAttribute("x1");
+			let y1 = obj.getAttribute("y1");
+			let x2 = obj.getAttribute("x2");
+			let y2 = obj.getAttribute("y2");
+			let x = x1;
+			let y = y1;
+			t1 = setInterval(function(){
+				if(x == x2 && y==y2){
+					clearInterval(t1);
+				}
+				if(x < x2) {
+					x++;
+				}
+				if(y<y2) {
+					y++;
+				} else if(y> y2){
+					y--;
+				}
+				let value = "M" + x1 +" "+ y1 +" "+ x +" "+ y;
+				obj.setAttribute("d",value);
+			},10);
+		}
+
+		function drawTwoLine(id1,id2){
+			let obj1 = document.getElementById(id1);
+			let obj2 = document.getElementById(id2);
+			console.log(obj1);
+			console.log(obj2);
+			let obj1_x1 = obj1.getAttribute("x1");
+			let obj1_y1 = obj1.getAttribute("y1");
+			let obj1_x2 = obj1.getAttribute("x2");
+			let obj1_y2 = obj1.getAttribute("y2");
+			let obj1_x = obj1_x1;
+			let obj1_y = obj1_y1;
+			let obj2_x1 = obj2.getAttribute("x1");
+			let obj2_y1 = obj2.getAttribute("y1");
+			let obj2_x2 = obj2.getAttribute("x2");
+			let obj2_y2 = obj2.getAttribute("y2");
+			let obj2_x = obj2_x1;
+			let obj2_y = obj2_y1;
+			t1 = setInterval(function(){
+				if(obj1_x == obj1_x2 && obj1_y==obj1_y2 && obj2_x == obj2_x2 && obj2_y==obj2_y2){
+					clearInterval(t1);
+				}
+				if(obj1_x < obj1_x2) {
+					obj1_x++;
+				}
+				if(obj1_y<obj1_y2) {
+					obj1_y++;
+				} else if(obj1_y> obj1_y2){
+					obj1_y--;
+				}
+				let obj1_value = "M" + obj1_x1 +" "+ obj1_y1 +" "+ obj1_x +" "+ obj1_y;
+				obj1.setAttribute("d",obj1_value);
+
+				if(obj2_x < obj2_x2) {
+					obj2_x++;
+				}
+				if(obj2_y<obj2_y2) {
+					obj2_y++;
+				} else if(obj2_y> obj2_y2){
+					obj2_y--;
+				}
+				let obj2_value = "M" + obj2_x1 +" "+ obj2_y1 +" "+ obj2_x +" "+ obj2_y;
+				obj2.setAttribute("d",obj2_value);
+			},10);
+		}
+
+		function showRes(id){
+			let obj = document.getElementById(id);
+			let opacity = 0;
+			t2 = setInterval(function(){
+				opacity = opacity + 1;
+				if(opacity == 10){
+					clearInterval(t2);
+				}
+				obj.style.opacity = opacity/10;
+			},100);
+		}
+	</script>
+</body>
+<html>
