@@ -126,5 +126,9 @@ app.run(ssl_context=('./证书名称.crt', './证书名称.key'))
 
 ### 4、Flask服务运行端口与地址设置
 
-请自行搜索**“flask app.run()参数”**
+请自行搜索 **“flask app.run()参数”**
+
+后续更新正在路上，欢迎赞助哦：
+https://azz.ee/mozaclab
+https://afdian.net/a/mozaclab
 
