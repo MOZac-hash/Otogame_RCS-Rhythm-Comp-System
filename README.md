@@ -12,7 +12,9 @@ Made by M0Z@C from MozacLab/XJU2019/XJUSEC
 	</script>
 </html>
 
-<a href="https://afdian.net/a/afdian">< img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" alt=""></a>
+<a href="https://afdian.net/a/mozaclab">
+	< img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" alt="">
+</a>
 
 ## 赞助者
 
